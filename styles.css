@@ -353,10 +353,10 @@ h1 {
 .systems h3,
 .feature h3,
 .card h3,
-.role h3,
+.job h3,
 .practice h3 {
     font-size: 1.65rem;
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: 0.55rem;
 }
 
@@ -393,11 +393,33 @@ h1 {
 
 .feature {
     display: grid;
-    grid-template-columns: 1.35fr 0.9fr;
-    gap: 2rem;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3rem;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2.75rem 0;
     border-bottom: 1px solid var(--line);
+}
+
+.feature > * {
+    min-width: 0;
+}
+
+.feature-copy,
+.card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.feature-copy h3,
+.card h3 {
+    margin-bottom: 0;
+}
+
+.feature-copy p:not(.role),
+.card > p {
+    line-height: 1.7;
+    overflow-wrap: break-word;
 }
 
 .shot {
@@ -423,7 +445,7 @@ h1 {
 
 .feature-copy .pills,
 .card .pills {
-    margin: 0.9rem 0 1rem;
+    margin: 0.35rem 0 0;
 }
 
 .out {
@@ -433,13 +455,14 @@ h1 {
 .work-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem 1.75rem;
-    padding-top: 2.25rem;
+    gap: 4.5rem 2.75rem;
+    padding-top: 3rem;
 }
 
 .card {
     display: flex;
     flex-direction: column;
+    gap: 1.15rem;
     min-width: 0;
 }
 
@@ -472,7 +495,7 @@ h1 {
     flex-direction: column;
 }
 
-.role {
+.job {
     display: grid;
     grid-template-columns: 220px 1fr;
     gap: 1.5rem;
@@ -561,8 +584,14 @@ h1 {
     .systems > li,
     .section-head,
     .feature,
-    .role {
+    .job,
+    .work-grid {
         grid-template-columns: 1fr;
+    }
+
+    .feature {
+        gap: 1.5rem;
+        padding: 2.25rem 0;
     }
 
     .systems .pills {
