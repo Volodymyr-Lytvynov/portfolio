@@ -1,119 +1,80 @@
-// Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('.site-header');
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.site-nav');
+    const label = toggle ? toggle.querySelector('.sr-only') : null;
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+    function setMenu(open) {
+        if (!toggle || !nav) return;
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        nav.classList.toggle('is-open', open);
+        document.body.classList.toggle('nav-open', open);
+        if (label) label.textContent = open ? 'Close menu' : 'Menu';
+    }
+
+    if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+            setMenu(toggle.getAttribute('aria-expanded') !== 'true');
         });
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (navMenu.classList.contains('active') && 
-                !navMenu.contains(e.target) && 
-                !hamburger.contains(e.target)) {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            }
+        nav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                setMenu(false);
+            });
         });
 
-        // Close mobile menu when pressing Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            }
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') setMenu(false);
         });
     }
+
+    function onScroll() {
+        if (!header) return;
+        header.classList.toggle('is-stuck', window.scrollY > 8);
+    }
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    document.querySelectorAll('.copy-email').forEach(function (button) {
+        button.addEventListener('click', function () {
+            const email = button.getAttribute('data-copy');
+            const original = button.textContent;
+            copyText(email).then(function (ok) {
+                button.textContent = ok ? 'Copied' : 'Not copied';
+                window.setTimeout(function () {
+                    button.textContent = original;
+                }, 1800);
+            });
+        });
+    });
 });
 
-// Copy Email functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const copyEmailBtn = document.querySelector('.btn-copy-email');
-    
-    if (copyEmailBtn) {
-        copyEmailBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const email = 'v.lytvynov55@gmail.com';
-            
-            // Use the Clipboard API if available
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(email).then(function() {
-                    showCopySuccess(copyEmailBtn);
-                }).catch(function(err) {
-                    console.error('Failed to copy email: ', err);
-                    fallbackCopyTextToClipboard(email, copyEmailBtn);
-                });
-            } else {
-                // Fallback for older browsers or non-secure contexts
-                fallbackCopyTextToClipboard(email, copyEmailBtn);
-            }
+function copyText(value) {
+    if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(value).then(function () {
+            return true;
+        }).catch(function () {
+            return fallbackCopy(value);
         });
     }
-});
+    return Promise.resolve(fallbackCopy(value));
+}
 
-// Fallback method for copying text to clipboard
-function fallbackCopyTextToClipboard(text, button) {
-    const textArea = document.createElement('textarea');
-    textArea.value = text;
-    
-    // Avoid scrolling to bottom
-    textArea.style.top = '0';
-    textArea.style.left = '0';
-    textArea.style.position = 'fixed';
-    textArea.style.opacity = '0';
-    
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-    
+function fallbackCopy(value) {
+    const field = document.createElement('textarea');
+    field.value = value;
+    field.setAttribute('readonly', '');
+    field.style.position = 'fixed';
+    field.style.left = '-999px';
+    document.body.appendChild(field);
+    field.select();
+    let ok = false;
     try {
-        const successful = document.execCommand('copy');
-        if (successful) {
-            showCopySuccess(button);
-        } else {
-            showCopyError(button);
-        }
-    } catch (err) {
-        console.error('Fallback: Oops, unable to copy', err);
-        showCopyError(button);
+        ok = document.execCommand('copy');
+    } catch (error) {
+        ok = false;
     }
-    
-    document.body.removeChild(textArea);
-}
-
-// Show success feedback
-function showCopySuccess(button) {
-    const iconSpan = button.querySelector('.btn-icon');
-    const originalText = button.childNodes[0].textContent.trim();
-    
-    // Change only the text content, keeping the icon
-    button.childNodes[0].textContent = 'Copied! ';
-    
-    setTimeout(function() {
-        button.childNodes[0].textContent = originalText;
-    }, 2000);
-}
-
-// Show error feedback
-function showCopyError(button) {
-    const iconSpan = button.querySelector('.btn-icon');
-    const originalText = button.childNodes[0].textContent.trim();
-    
-    // Change only the text content, keeping the icon
-    button.childNodes[0].textContent = 'Copy failed ';
-    
-    setTimeout(function() {
-        button.childNodes[0].textContent = originalText;
-    }, 2000);
+    document.body.removeChild(field);
+    return ok;
 }

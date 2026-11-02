@@ -4,551 +4,460 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volodymyr Lytvynov</title>
+    <title>Volodymyr Lytvynov — Senior Shopify Developer</title>
+    <meta name="description" content="Senior Shopify developer for DTC brands. Theme architecture, checkout UI, merchandising systems, and conversion work on production stores.">
+    <link rel="canonical" href="https://lytvynov.dev/">
+    <meta name="theme-color" content="#f6f4ef">
+    <meta property="og:title" content="Volodymyr Lytvynov — Senior Shopify Developer">
+    <meta property="og:description" content="Theme architecture, checkout UI, merchandising systems, and conversion work on production Shopify stores.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lytvynov.dev/">
+    <meta property="og:image" content="https://lytvynov.dev/assets/images/work/dreaver.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="alternate icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=4">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Volodymyr Lytvynov",
+        "jobTitle": "Senior Shopify Developer",
+        "url": "https://lytvynov.dev/",
+        "email": "mailto:v.lytvynov55@gmail.com",
+        "telephone": "+380662817655",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lviv",
+            "addressCountry": "UA"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/lytvynov-volodymyr/",
+            "https://github.com/Volodymyr-Lytvynov"
+        ]
+    }
+    </script>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="45px" height="45px" stroke-width="2"
-                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#96BF48">
-                    <path d="M13.5 6L10 18.5" stroke="#96BF48" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    <path d="M6.5 8.5L3 12L6.5 15.5" stroke="#96BF48" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    <path d="M17.5 8.5L21 12L17.5 15.5" stroke="#96BF48" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                </svg>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <a class="wordmark" href="#top">Lytvynov</a>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+            <a href="#engineering">Engineering</a>
+            <a href="#work">Stores</a>
+            <a href="#practice">Practice</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a class="header-mail" href="mailto:v.lytvynov55@gmail.com">Email</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span class="nav-toggle-box" aria-hidden="true"><span></span><span></span></span>
+            <span class="sr-only">Menu</span>
+        </button>
+    </header>
+
+    <main id="main">
+        <section class="hero" id="top">
+            <p class="eyebrow">Senior Shopify Developer <span aria-hidden="true">·</span> Lviv, remote</p>
+            <h1>Storefront engineering for brands on Shopify.</h1>
+            <p class="lede">I take live DTC stores from design to a system other people can run. Theme architecture, checkout UI, merchandising, and the experiments that decide what stays in production.</p>
+            <div class="hero-actions">
+                <a class="btn" href="#work">Production stores</a>
+                <a class="btn btn-line" href="mailto:v.lytvynov55@gmail.com">v.lytvynov55@gmail.com</a>
+                <button class="btn btn-text copy-email" type="button" data-copy="v.lytvynov55@gmail.com">Copy</button>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+            <ul class="facts">
+                <li>
+                    <strong>Checkout UI</strong>
+                    <span>Extensions and reusable blocks across client stores</span>
                 </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
+                <li>
+                    <strong>Online Store 2.0</strong>
+                    <span>Sections, metafields, and theme systems</span>
                 </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                <li>
+                    <strong>Merchandising</strong>
+                    <span>Bundles, discounts, and product configurators</span>
+                </li>
+                <li>
+                    <strong>Performance</strong>
+                    <span>Collection media and Core Web Vitals</span>
                 </li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Main Content -->
-    <main class="bento-container">
-        <!-- Hero Section - 1 Column -->
-        <section id="home" class="hero bento-box bento-hero">
-            <div class="hero-container">
-                <div class="hero-content-header">
-                    <p class="hero-subtitle">Web | Frontend | Shopify Developer</p>
-                    <div class="availability-badge">
-                        <div class="status-dot"></div>
-                        <span>AVAILABLE FOR JOB</span>
-                    </div>
+        <section class="section" id="engineering">
+            <header class="section-head">
+                <p class="section-kicker">01 — Engineering</p>
+                <div>
+                    <h2>Systems, not snippets.</h2>
+                    <p>The work a tech lead can inspect. Reusable checkout, merchandising, and performance — then the stores they landed in.</p>
                 </div>
-                <div class="hero-content-container">
-                    <div class="hero-content">
+            </header>
+            <ol class="systems">
+                <li>
+                    <p class="sys-index">01</p>
+                    <div>
+                        <h3>Checkout as a product</h3>
+                        <p>A private checkout app for independent client stores. Ten configurable Checkout UI blocks — upsells, testimonials, timers — so the last step is configured, not recoded per theme.</p>
+                        <p class="where">Checkout UI also shipped on <a href="#dreaver">Dreaver</a> and <a href="#sneakerask">SneakerAsk</a>.</p>
+                    </div>
+                    <ul class="pills">
+                        <li>Checkout UI Extensions</li>
+                        <li>React</li>
+                        <li>Shopify Plus</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="sys-index">02</p>
+                    <div>
+                        <h3>Merchandising logic</h3>
+                        <p>Bundle builders with configurable products, variants, and conditional discounts. Configurators with a live preview, including a lipstick builder and an e-bike configurator taken much further than the first version.</p>
+                        <p class="where">Bundle work on <a href="#calis">Cali’s Books</a> and <a href="#skip">Skip!</a>.</p>
+                    </div>
+                    <ul class="pills">
+                        <li>Liquid</li>
+                        <li>Metafields</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="sys-index">03</p>
+                    <div>
+                        <h3>Collection performance</h3>
+                        <p>Responsive image loading on collection pages, rebuilt so catalog grids stop paying for the wrong file. PageSpeed moved from red to green on mobile and desktop.</p>
+                        <p class="where">Theme-level work on production storefronts, measured in Lighthouse.</p>
+                    </div>
+                    <ul class="pills">
+                        <li>Theme assets</li>
+                        <li>Lighthouse</li>
+                        <li>Core Web Vitals</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
 
-                        <h1 class="hero-title">I'm Volodymyr Lytvynov</h1>
-                        <p class="hero-description">I specialize in crafting visually appealing and high-converting
-                            online experiences.</p>
-                        <div class="hero-buttons">
-                            <div class="button-group">
-                                <a href="#contact" class="btn btn-primary btn-hire-me">Hire me <span>+</span></a>
-                            </div>
-                            <a href="#contact" class="btn btn-secondary btn-copy-email">
-                                Copy Email
-                                <span class="btn-icon">
-                                    <?xml version="1.0" encoding="UTF-8"?><svg width="45px" height="45px"
-                                        stroke-width="2" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg" color="#696969">
-                                        <path
-                                            d="M19.4 20H9.6C9.26863 20 9 19.7314 9 19.4V9.6C9 9.26863 9.26863 9 9.6 9H19.4C19.7314 9 20 9.26863 20 9.6V19.4C20 19.7314 19.7314 20 19.4 20Z"
-                                            stroke="#696969" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M15 9V4.6C15 4.26863 14.7314 4 14.4 4H4.6C4.26863 4 4 4.26863 4 4.6V14.4C4 14.7314 4.26863 15 4.6 15H9"
-                                            stroke="#696969" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
+        <section class="section" id="work">
+            <header class="section-head">
+                <p class="section-kicker">02 — Stores</p>
+                <div>
+                    <h2>Production work.</h2>
+                    <p>Eleven commercial storefronts. The label is the involvement. The link is the live store.</p>
+                </div>
+            </header>
+
+            <article class="feature" id="calis">
+                <a class="shot" href="https://www.calisbooks.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/work/calis.jpg" width="1600" height="917" alt="Cali’s Books storefront" fetchpriority="high">
+                </a>
+                <div class="feature-copy">
+                    <p class="role">Built the store</p>
+                    <h3>Cali’s Books</h3>
+                    <p>Full Shopify build for an interactive children’s book brand. Responsive storefront, localization, product bundles, and product behavior such as recordable narration.</p>
+                    <ul class="pills">
+                        <li>Theme build</li>
+                        <li>Bundles</li>
+                        <li>Localization</li>
+                    </ul>
+                    <a class="out" href="https://www.calisbooks.com/" target="_blank" rel="noopener noreferrer">calisbooks.com<span class="sr-only"> (opens in a new tab)</span></a>
+                </div>
+            </article>
+
+            <article class="feature" id="detailrs">
+                <a class="shot" href="https://detailrs.nl" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/work/detailrs.jpg" width="1600" height="917" alt="Detailrs storefront" loading="lazy">
+                </a>
+                <div class="feature-copy">
+                    <p class="role">Full redesign</p>
+                    <h3>Detailrs</h3>
+                    <p>Complete redesign of a premium car-care catalog. Layout, components, and follow-up tests on the pages that carry the range.</p>
+                    <ul class="pills">
+                        <li>Redesign</li>
+                        <li>Theme UI</li>
+                        <li>A/B tests</li>
+                    </ul>
+                    <a class="out" href="https://detailrs.nl" target="_blank" rel="noopener noreferrer">detailrs.nl<span class="sr-only"> (opens in a new tab)</span></a>
+                </div>
+            </article>
+
+            <div class="work-grid">
+                <article class="card" id="dreaver">
+                    <a class="shot" href="https://dreaver.nl" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/work/dreaver.jpg" width="1600" height="917" alt="Dreaver storefront" loading="lazy">
+                    </a>
+                    <div class="card-meta">
+                        <p class="role">Checkout and experiments</p>
+                        <h3>Dreaver</h3>
                     </div>
-                    <div class="hero-avatar">
-                        <div class="avatar-image">
-                            <img src="/assets/images/avatar.jpeg" alt="Avatar">
-                        </div>
-                        <div class="location-container">
-                            <span class="location-icon">
-                                <?xml version="1.0" encoding="UTF-8"?><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 12C10.34 12 9 10.66 9 9C9 7.34 10.34 6 12 6C13.66 6 15 7.34 15 9C15 10.66 13.66 12 12 12Z" fill="#96BF48"/>
-                                </svg>
-                            </span>
-                            <span class="location-text">Ukraine 🇺🇦</span>
-                        </div>
+                    <p>Storefront UI and checkout surfaces for a high-consideration equipment catalog, with tests on layout and conversion.</p>
+                    <ul class="pills">
+                        <li>Checkout UI</li>
+                        <li>React</li>
+                        <li>A/B tests</li>
+                    </ul>
+                    <a class="out" href="https://dreaver.nl" target="_blank" rel="noopener noreferrer">dreaver.nl<span class="sr-only"> (opens in a new tab)</span></a>
+                </article>
+
+                <article class="card" id="skip">
+                    <a class="shot" href="https://skipsupplements.com/en" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/work/skip.jpg" width="1600" height="917" alt="Skip storefront" loading="lazy">
+                    </a>
+                    <div class="card-meta">
+                        <p class="role">Built from design</p>
+                        <h3>Skip!</h3>
                     </div>
+                    <p>Figma implemented in theme code. Responsive product pages, bundles, promotions, and tests for a supplement brand.</p>
+                    <ul class="pills">
+                        <li>Theme build</li>
+                        <li>Bundles</li>
+                        <li>A/B tests</li>
+                    </ul>
+                    <a class="out" href="https://skipsupplements.com/en" target="_blank" rel="noopener noreferrer">skipsupplements.com<span class="sr-only"> (opens in a new tab)</span></a>
+                </article>
+
+                <article class="card" id="fugazzi">
+                    <a class="shot" href="https://fugazzifragrances.com" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/work/fugazzi.jpg" width="1600" height="917" alt="Fugazzi storefront" loading="lazy">
+                    </a>
+                    <div class="card-meta">
+                        <p class="role">Markets and bundles</p>
+                        <h3>Fugazzi</h3>
+                    </div>
+                    <p>Localized, multi-currency fragrance store. UI updates, bundle presentation, and experiments along the purchase path.</p>
+                    <ul class="pills">
+                        <li>Markets</li>
+                        <li>Localization</li>
+                        <li>A/B tests</li>
+                    </ul>
+                    <a class="out" href="https://fugazzifragrances.com" target="_blank" rel="noopener noreferrer">fugazzifragrances.com<span class="sr-only"> (opens in a new tab)</span></a>
+                </article>
+
+                <article class="card" id="sneakerask">
+                    <a class="shot" href="https://sneakerask.nl" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/work/sneakerask.jpg" width="1600" height="917" alt="SneakerAsk storefront" loading="lazy">
+                    </a>
+                    <div class="card-meta">
+                        <p class="role">Checkout UI</p>
+                        <h3>SneakerAsk</h3>
+                    </div>
+                    <p>Product UI and checkout UI for an authenticated sneaker catalog, with tests on layout and conversion.</p>
+                    <ul class="pills">
+                        <li>Checkout UI</li>
+                        <li>React</li>
+                        <li>A/B tests</li>
+                    </ul>
+                    <a class="out" href="https://sneakerask.nl" target="_blank" rel="noopener noreferrer">sneakerask.nl<span class="sr-only"> (opens in a new tab)</span></a>
+                </article>
+
+                <article class="card" id="mens">
+                    <a class="shot" href="https://mensbestbasics.com" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/work/mens.jpg" width="1600" height="917" alt="Men’s Best Basics storefront" loading="lazy">
+                    </a>
+                    <div class="card-meta">
+                        <p class="role">Localization</p>
+                        <h3>Men’s Best Basics</h3>
+                    </div>
+                    <p>Front end on a multi-currency EU apparel store. UI, locale details, and layout tests, with Vue where the interface needed it.</p>
+                    <ul class="pills">
+                        <li>Vue</li>
+                        <li>Markets</li>
+                        <li>A/B tests</li>
+                    </ul>
+                    <a class="out" href="https://mensbestbasics.com" target="_blank" rel="noopener noreferrer">mensbestbasics.com<span class="sr-only"> (opens in a new tab)</span></a>
+                </article>
+
+                <article class="card" id="samako">
+                    <a class="shot" href="https://samako.com" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/work/samako.jpg" width="1600" height="917" alt="Samako storefront" loading="lazy">
+                    </a>
+                    <div class="card-meta">
+                        <p class="role">Theme sections</p>
+                        <h3>Samako</h3>
+                    </div>
+                    <p>Sections, localization, and layout tests for a European cleaning catalog.</p>
+                    <ul class="pills">
+                        <li>Sections</li>
+                        <li>Localization</li>
+                        <li>A/B tests</li>
+                    </ul>
+                    <a class="out" href="https://samako.com" target="_blank" rel="noopener noreferrer">samako.com<span class="sr-only"> (opens in a new tab)</span></a>
+                </article>
+
+                <article class="card" id="fatbikes">
+                    <a class="shot" href="https://fatbikeskopen.nl" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/work/fatbikes.jpg" width="1600" height="917" alt="Fatbikeskopen storefront" loading="lazy">
+                    </a>
+                    <div class="card-meta">
+                        <p class="role">Catalog UX</p>
+                        <h3>Fatbikeskopen</h3>
+                    </div>
+                    <p>Collection and product UI, plus tests, on a multi-brand bike catalog with showroom context.</p>
+                    <ul class="pills">
+                        <li>Catalog UI</li>
+                        <li>A/B tests</li>
+                    </ul>
+                    <a class="out" href="https://fatbikeskopen.nl" target="_blank" rel="noopener noreferrer">fatbikeskopen.nl<span class="sr-only"> (opens in a new tab)</span></a>
+                </article>
+
+                <article class="card" id="happybed">
+                    <a class="shot" href="https://thehappybed.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/work/happybed.jpg" width="1600" height="917" alt="HappyBed storefront" loading="lazy">
+                    </a>
+                    <div class="card-meta">
+                        <p class="role">Product pages</p>
+                        <h3>HappyBed</h3>
+                    </div>
+                    <p>Product-page UI and tests for a trial-based sleep catalog shipping across Europe.</p>
+                    <ul class="pills">
+                        <li>Product UI</li>
+                        <li>A/B tests</li>
+                    </ul>
+                    <a class="out" href="https://thehappybed.com/" target="_blank" rel="noopener noreferrer">thehappybed.com<span class="sr-only"> (opens in a new tab)</span></a>
+                </article>
+
+                <article class="card" id="eclat">
+                    <a class="shot" href="https://eclatantbeauty.nl/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/work/eclat.jpg" width="1600" height="917" alt="éclat storefront" loading="lazy">
+                    </a>
+                    <div class="card-meta">
+                        <p class="role">Product storytelling</p>
+                        <h3>éclat</h3>
+                    </div>
+                    <p>Components and tests on a content-heavy supplement storefront.</p>
+                    <ul class="pills">
+                        <li>Theme UI</li>
+                        <li>A/B tests</li>
+                    </ul>
+                    <a class="out" href="https://eclatantbeauty.nl/" target="_blank" rel="noopener noreferrer">eclatantbeauty.nl<span class="sr-only"> (opens in a new tab)</span></a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="practice">
+            <header class="section-head">
+                <p class="section-kicker">03 — Practice</p>
+                <div>
+                    <h2>What I actually ship.</h2>
+                    <p>Depth sits in Shopify and the interface around it. The list is the working set, kept short on purpose.</p>
+                </div>
+            </header>
+            <div class="practice">
+                <div>
+                    <h3>Shopify</h3>
+                    <ul>
+                        <li>Liquid and Online Store 2.0</li>
+                        <li>Sections, blocks, metafields, metaobjects</li>
+                        <li>Shopify Plus</li>
+                        <li>Checkout UI Extensions</li>
+                        <li>Shopify Functions</li>
+                        <li>Storefront API, Ajax API, Admin GraphQL, webhooks</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Interface</h3>
+                    <ul>
+                        <li>JavaScript and TypeScript</li>
+                        <li>React and Vue</li>
+                        <li>Web Components</li>
+                        <li>HTML, CSS, and SCSS</li>
+                        <li>Responsive theme implementation from Figma</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Commerce</h3>
+                    <ul>
+                        <li>CRO and A/B tests in VWO and Convert</li>
+                        <li>Bundles, conditional discounts, configurators</li>
+                        <li>Markets, multi-currency, localization</li>
+                        <li>Lighthouse and Core Web Vitals</li>
+                        <li>CRM and subscription webhooks</li>
+                        <li>A Nuxt API proxy in front of a Vue storefront</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Experience & Technologies Section - 2 Columns -->
-        <section class="experience-tech-section">
-            <!-- Recent Work Experience - Left Column -->
-            <div class="experience-box bento-box">
-                <h2 class="box-title">Recent Work Experience</h2>
-                <div class="experience-content">
-                    <!-- Experience items will be added here -->
-                    <div class="experience-item">
+        <section class="section" id="experience">
+            <header class="section-head">
+                <p class="section-kicker">04 — Experience</p>
+                <div>
+                    <h2>Where the work happened.</h2>
+                    <p>A stable timeline. Engagements overlap when contract storefront work runs in parallel.</p>
+                </div>
+            </header>
+            <div class="roles">
+                <article class="role">
+                    <div class="role-meta">
+                        <p>2023 — Present</p>
+                        <p>EcomTraffic B.V.</p>
+                    </div>
+                    <div>
                         <h3>Senior Shopify Developer</h3>
-                        <p class="company">EcomTraffic B.V.</p>
-                        <p class="duration">2023 - Present</p>
-                        <p class="description">Develop and optimize Shopify stores with a focus on
-                            conversion rate optimization (CRO). Implement custom
-                            UI/UX using HTML, CSS, and JavaScript, run A/B tests,
-                            and apply data-driven improvements to boost sales and
-                            user engagement.</p>
+                        <p>Storefront delivery for commercial brands. Custom UI, checkout and merchandising changes, A/B tests, and the implementation decisions that go to production with design, marketing, and the client.</p>
                     </div>
-                    <div class="experience-item">
+                </article>
+                <article class="role">
+                    <div class="role-meta">
+                        <p>2024 — 2025</p>
+                        <p>Diversido</p>
+                    </div>
+                    <div>
                         <h3>Shopify Developer</h3>
-                        <p class="company">Diversido</p>
-                        <p class="duration">2024 - 2025</p>
-                        <p class="description">Build and maintain Shopify theme and custom
-                            storefront. Collaborate with designers and marketers to
-                            ensure responsive design, fast performance, and
-                            seamless user experience across devices.</p>
+                        <p>Theme and custom storefronts. Responsive interfaces, production fixes, and performance, in parallel with other client delivery.</p>
                     </div>
-                    <div class="experience-item">
+                </article>
+                <article class="role">
+                    <div class="role-meta">
+                        <p>2022 — 2024</p>
+                        <p>Grandz</p>
+                    </div>
+                    <div>
                         <h3>Shopify Developer</h3>
-                        <p class="company">Grandz</p>
-                        <p class="duration">2022 - 2024</p>
-                        <p class="description">Created custom Shopify stores from design mockups to
-                            fully functional, branded websites. Ensured clean,
-                            optimized code, cross-device responsiveness, and
-                            alignment with client branding and business objectives.</p>
+                        <p>New stores from design mockups. Liquid sections, responsive templates, and theme optimization kept aligned with the brand.</p>
                     </div>
-                    <div class="experience-item">
+                </article>
+                <article class="role">
+                    <div class="role-meta">
+                        <p>2020 — 2022</p>
+                        <p>Independent</p>
+                    </div>
+                    <div>
                         <h3>Web Developer</h3>
-                        <p class="company">Freelancer</p>
-                        <p class="duration">2020 - 2022</p>
-                        <p class="description">Developed custom websites and web applications for
-                            diverse clients. Delivered responsive, user-centered
-                            designs and full-cycle web solutions — from planning
-                            and coding to deployment and optimization.</p>
+                        <p>Custom websites and early commercial Shopify work, from planning through deployment.</p>
                     </div>
-                </div>
-            </div>
-
-            <!-- Technologies - Right Column -->
-            <div class="technologies-box bento-box">
-                <h2 class="box-title">Technologies</h2>
-                <div class="tech-categories">
-                    <!-- Frontend Technologies -->
-                    <div class="tech-category">
-                        <h3>Frontend</h3>
-                        <div class="tech-tags">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">HTML5</span>
-                        </div>
-                    </div>
-
-                    <!-- Shopify Technologies -->
-                    <div class="tech-category">
-                        <h3>Shopify</h3>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Liquid</span>
-                            <span class="tech-tag">Shopify API</span>
-                            <span class="tech-tag">Theme Development</span>
-                            <span class="tech-tag">App Development</span>
-                            <span class="tech-tag">Store Optimization</span>
-                        </div>
-                    </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <!-- Projects Section - 1 Column -->
-        <section id="projects" class="projects bento-box bento-projects">
-            <h2 class="box-title">Projects</h2>
-            <div class="projects-grid">
-                <!-- Project cards will be added here -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/images/projects/dreaver.png" alt="Dreaver">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Dreaver</h3>
-                        <p class="project-description">Dreaver.nl is a Dutch e-commerce store focused on treadmills and
-                            recovery equipment. I contributed as a Shopify front-end developer, implementing UI
-                            components and A/B tests to enhance design, usability, and conversions.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Shopify</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">A/B Testing</span>
-                            <span class="tech-tag">Checkout UI</span>
-                            <span class="tech-tag">React</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://dreaver.nl" class="project-link">Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/images/projects/fugazzi.png" alt="Fugazzi">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Fugazzi</h3>
-                        <p class="project-description">Fugazzi Fragrances is a DTC Shopify store selling premium
-                            perfumes, home & body scents, and fragrance sets, with multi-currency support, localized
-                            shopping, and promotional bundles.
-
-                            I worked as a front-end developer / Shopify contributor, implementing UI updates,
-                            localization features, and running A/B tests to optimize layout, conversion funnels, and
-                            user engagement.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Shopify</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">A/B Testing</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://fugazzifragrances.com" class="project-link">Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/images/projects/calis.png" alt="Cali's Books">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Cali's Books</h3>
-                        <p class="project-description">Cali’s Books is an interactive children’s book brand offering
-                            sound-books, bilingual & educational “infinibook” bundles, and creative learning tools with
-                            free international shipping.
-
-                            I fully built the Shopify store from scratch — crafting the UX & responsive front end,
-                            implementing localization, product bundles, interactive features (recordable narration
-                            etc.), and optimizing for conversion & visual storytelling.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Shopify</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">Product Bundles</span>
-                            <span class="tech-tag">Redesign</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://detailrs.nl" class="project-link">Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/images/projects/skip.png" alt="Skip!">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Skip!</h3>
-                        <p class="project-description">Skip! is a Dutch e-commerce brand offering a natural, vegan, and
-                            gluten-free supplement for post-festival and weekend recovery.
-
-                            I built the Shopify store from scratch based on Figma designs, implementing the responsive
-                            front end, product bundles, promotions, and A/B tests to optimize user experience and
-                            conversions.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Shopify</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">A/B Testing</span>
-                            <span class="tech-tag">Redesign</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://skipsupplements.com/en" class="project-link">Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/images/projects/mens.png" alt="Mens Best Basics">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Men's Best Basics</h3>
-                        <p class="project-description">Men’s Best Basics is an e-commerce brand offering high-quality,
-                            well-fitting T-shirts and basics, shipped across Europe with multi-currency, localization,
-                            and bundle-save discounts.
-
-                            I joined as a Shopify front-end contributor, where I implemented UI enhancements,
-                            localization elements, and ran A/B tests to fine-tune layouts and improve conversion rates.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Shopify</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">A/B Testing</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://mensbestbasics.com" class="project-link">Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/images/projects/samako.png" alt="Samako Cleaning">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Samako Cleaning</h3>
-                        <p class="project-description">Samako Cleaning is a Shopify-based direct-to-consumer site
-                            selling premium household cleaning devices and solutions (e.g. stain removers, steam
-                            cleaners, air purifiers) across Europe.
-
-                            I supported the project as a Shopify front-end contributor, implementing UI sections,
-                            localization features, and running A/B tests to refine layouts, improve user interaction,
-                            and boost conversion efficiency.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">A/B Testing</span>
-                            <span class="tech-tag">Localization</span>
-                            <span class="tech-tag">Shopify</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://samako.com" class="project-link">Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/images/projects/sneakerask.png" alt="SneakerAsk">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">SneakerAsk</h3>
-                        <p class="project-description">SneakerAsk.nl is an e-commerce platform specializing in exclusive
-                            and authenticated sneakers with fast (48-hour) shipping and authenticity guarantees.
-
-                            I contributed as a Shopify/front-end developer, implementing UI components and A/B tests to
-                            refine layouts, boost conversions, and enhance the overall shopping experience.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Shopify</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">A/B Testing</span>
-                            <span class="tech-tag">Checkout UI</span>
-                            <span class="tech-tag">React</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://sneakerask.nl" class="project-link">Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/images/projects/detailrs.png" alt="Detailrs">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Detailrs</h3>
-                        <p class="project-description">Detailrs.nl is a Shopify-based e-commerce store specializing in
-                            premium car detailing and auto care products (ceramic coatings, shampoos, interior &
-                            exterior cleaners).
-
-                            I contributed as a front-end / Shopify developer, implementing complete redesign, UI
-                            components, layout tweaks, and A/B tests to enhance user experience and improve conversion
-                            performance.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Shopify</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">A/B Testing</span>
-                            <span class="tech-tag">Redesign</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://detailrs.nl" class="project-link">Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/images/projects/fatbikes.png" alt="Fatbikeskopen">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Fatbikeskopen</h3>
-                        <p class="project-description">Fatbikeskopen.nl is a Dutch e-commerce platform specializing in
-                            fatbikes, e-bikes, longtails, and folding bikes, offering a wide range of models from brands
-                            like OUXI, QM Wheels, and ENGWE. The site features multiple showrooms across the
-                            Netherlands, allowing customers to schedule test rides and receive personalized advice.
-
-                            I contributed as a Shopify front-end developer, implementing UI components and conducting
-                            A/B tests to enhance user experience and optimize conversion rates.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Shopify</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">A/B Testing</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://fatbikeskopen.nl" class="project-link">Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/images/projects/happybed.png" alt="HappyBed">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">HappyBed</h3>
-                        <p class="project-description">HappyBed is a European e-commerce store offering premium sleep
-                            products like duvets, pillows, and sheets, with a 30-day trial and 1-year warranty.
-
-                            I contributed as a Shopify front-end developer, implementing UI elements and running A/B
-                            tests to improve layout, usability, and conversions.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Shopify</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">A/B Testing</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://thehappybed.com/" class="project-link">Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/images/projects/eclat.png" alt="éclat">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">éclat</h3>
-                        <p class="project-description">éclat is a Dutch beauty brand offering high-quality collagen
-                            supplements designed to enhance skin, hair, and nails. Their products include marine
-                            collagen blends and vegan alternatives, enriched with hyaluronic acid, alpha-lipoic acid,
-                            and 16 essential vitamins and minerals.
-
-                            I contributed as a Shopify front-end developer, implementing UI components and conducting
-                            A/B tests to optimize user experience and conversion rates.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Shopify</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">A/B Testing</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://eclatantbeauty.nl/" class="project-link">Website</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact bento-box">
-            <h2 class="box-title">Get In Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
-                                fill="#96BF48" />
-                        </svg>
-                    </div>
-                    <div class="contact-info">
-                        <h3>Email</h3>
-                        <a href="mailto:v.lytvynov55@gmail.com" class="personal-link">v.lytvynov55@gmail.com</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.367C3.274 4.226 4.194 3.301 5.337 3.301C6.477 3.301 7.401 4.226 7.401 5.367C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z"
-                                fill="#96BF48" />
-                        </svg>
-                    </div>
-                    <div class="contact-info">
-                        <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/lytvynov-volodymyr/"
-                            class="personal-link">linkedin.com/in/lytvynov-volodymyr</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"
-                                fill="#96BF48" />
-                        </svg>
-                    </div>
-                    <div class="contact-info">
-                        <h3>Phone</h3>
-                        <a href="tel:+380662817655" class="personal-link">+380662817655</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                                fill="#96BF48" />
-                        </svg>
-                    </div>
-                    <div class="contact-info">
-                        <h3>GitHub</h3>
-                        <a href="https://github.com/Volodymyr-Lytvynov"
-                            class="personal-link">github.com/Volodymyr-Lytvynov</a>
-                    </div>
-                </div>
-
-                <!-- <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#96BF48"/>
-                        </svg>
-                    </div>
-                    <div class="contact-info">
-                        <h3>Location</h3>
-                        <p>Ukraine</p>
-                    </div>
-                </div> -->
+        <section class="section contact" id="contact">
+            <div class="contact-copy">
+                <p class="section-kicker">05 — Contact</p>
+                <h2>Senior Shopify roles and contract storefronts.</h2>
+                <p>Remote from Lviv. I work directly with founders, tech leads, and the people who own the store.</p>
+                <p class="email-row">
+                    <a class="email" href="mailto:v.lytvynov55@gmail.com">v.lytvynov55@gmail.com</a>
+                    <button class="btn btn-text copy-email" type="button" data-copy="v.lytvynov55@gmail.com">Copy</button>
+                </p>
+                <ul class="contact-links">
+                    <li><a href="https://www.linkedin.com/in/lytvynov-volodymyr/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://github.com/Volodymyr-Lytvynov" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="tel:+380662817655">+380 66 281 76 56</a></li>
+                </ul>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Volodymyr Lytvynov. All rights reserved.</p>
-        </div>
+    <footer class="site-footer">
+        <p>Volodymyr Lytvynov</p>
+        <p>Senior Shopify Developer</p>
+        <p>© 2026</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=4"></script>
 </body>
 
 </html>
